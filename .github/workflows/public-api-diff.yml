@@ -34,14 +34,14 @@ jobs:
         echo "NEW_VERSION=$NEW" >> $GITHUB_ENV
     
     - name: Detect YubiKit Public API Changes (macOS)
-      uses: Adyen/adyen-swift-public-api-diff@main
+      uses: Adyen/adyen-swift-public-api-diff@goergisn-patch-1
       with:
         platform: macOS
         new: ${{ env.NEW_VERSION }}
         old: ${{ env.OLD_VERSION }}
 
     - name: Detect YubiKit Public API Changes (iOS)
-      uses: Adyen/adyen-swift-public-api-diff@0.11.1
+      uses: Adyen/adyen-swift-public-api-diff@goergisn-patch-1
       with:
         platform: iOS
         new: ${{ env.NEW_VERSION }}
