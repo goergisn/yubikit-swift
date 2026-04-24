@@ -2,7 +2,8 @@ name: Detect public API changes
 
 on:
   pull_request:
-    branches: [ main ]
+    branches:
+      - "*"
     paths:
       - '.github/workflows/public-api-diff.yml'
   workflow_dispatch:
